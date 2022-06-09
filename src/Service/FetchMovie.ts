@@ -25,3 +25,6 @@ const fetchMoviePlotFull = (id: string) => {
    }
 
 export {fetchMovie,fetchMoviePlotFull}
+
+
+

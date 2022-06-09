@@ -2,6 +2,7 @@ import { Pagination } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
 import Spinner from '../../Layout/Spinner/Spinner';
 import { fetchMovie } from '../../Service/FetchMovie';
+import { Search } from '../Search/Search';
 import { MovieCard } from './MovieCard';
 
 const Movie:FC = () => {
@@ -23,6 +24,8 @@ const Movie:FC = () => {
 
     return (
         <div className='container content'>
+            <br />
+            <Search setSearch={setSearch} />
             <br />
             <div className='movies'>
                 

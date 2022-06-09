@@ -1,3 +1,4 @@
+import { Pagination } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
 import Spinner from '../../Layout/Spinner/Spinner';
 import { fetchMovie } from '../../Service/FetchMovie';
@@ -6,20 +7,19 @@ import { MovieCard } from './MovieCard';
 const Movie:FC = () => {
     const [value,setValue] = useState<Array<any>>([])
     const [loading,setLoading] = useState<boolean>(false);
+    const [page, setPage] = useState<number>(1);
+    const [search,setSearch] = useState<string>('matrix')
 
-    const moviejob = fetchMovie()
-
-    console.log(moviejob)
-      
+   
 
     const movie =  async () : Promise<void> => {
         setLoading(true)  
-        setValue(await fetchMovie())
+        setValue(await fetchMovie(search,page))
     }
     
     useEffect(() => {
         movie()
-    }, [])
+    }, [search,page])
 
     return (
         <div className='container content'>
@@ -36,6 +36,11 @@ const Movie:FC = () => {
                 }
              </div>
             <br />
+            <Pagination  className='pagination'
+        count={10}
+            page={page}
+            onChange={(_,num) => setPage(num)}
+        />
         </div>
     );
 };

@@ -14,7 +14,13 @@ const MovieCard:FC<MovieProps> = (props) => {
     return (
         <div>
             <Card style={{ width: '20rem', height: '100%' }} key={imdbID}>
-                <Card.Img variant="top" src={Poster} />
+            {Poster === 'N/A' ? (
+                 <img
+                 src={`https://via.placeholder.com/300x400?text=${Title}`}
+                 />
+                 ) : (
+                    <Card.Img variant="top" src={Poster} />
+                    )}
                 <Card.Body>
                     <Card.Title>{Title}</Card.Title>
                     <Card.Text>

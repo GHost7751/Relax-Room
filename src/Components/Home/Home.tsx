@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Accordion } from 'react-bootstrap';
 
 
-const Home = () => {
+const Home:FC = () => {
     return (
         <div className='homePage'>
             <Accordion defaultActiveKey="0">

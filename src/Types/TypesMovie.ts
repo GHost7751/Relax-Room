@@ -16,5 +16,5 @@ export default interface MoviePlotFull {
     Actors:string,
     Plot:string,
     Country:string,
-    Poster:string
+    Poster:string,
 }

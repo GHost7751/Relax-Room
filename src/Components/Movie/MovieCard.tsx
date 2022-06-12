@@ -1,8 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import MovieProps from '../../Types/TypesMovie';
+import MoreInfo from '../Modal/Modal';
+import {fetchMoviePlotFull} from '../../Service/FetchMovie'
 
 const MovieCard:FC<MovieProps> = (props) => {
+    const [modalShow, setModalShow] = useState<boolean>(false);
+    const [data,setData] = useState<any>({})
+    const [loading,setLoading] = useState<boolean>(false)
     const {
         Title,
         Year,
@@ -11,8 +16,14 @@ const MovieCard:FC<MovieProps> = (props) => {
         Poster
     } = props
 
+    const plotFull =  async () : Promise<void> => {
+        setLoading(true)  
+        setData( await fetchMoviePlotFull(imdbID))
+    }
+
+    
     return (
-        <div>
+        <>
             <Card style={{ width: '20rem', height: '100%' }} key={imdbID}>
             {Poster === 'N/A' ? (
                  <img
@@ -28,10 +39,16 @@ const MovieCard:FC<MovieProps> = (props) => {
                        <br />
                        Years : {Year}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" onClick={() => (setModalShow(true), plotFull())}>
+                        Launch vertically centered modal
+                    </Button>
                 </Card.Body>
             </Card>
-        </div>
+            <MoreInfo 
+                data = {data}
+                show={modalShow}
+                onHide={() => setModalShow(false)} />
+        </>
     );
 };
 

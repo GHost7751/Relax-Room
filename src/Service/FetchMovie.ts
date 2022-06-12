@@ -13,7 +13,7 @@ const fetchMovie = (search : string, page : number) => {
     return data
 }
 
-const fetchMoviePlotFull = (id: string) => {
+const fetchMoviePlotFull = (id: string | undefined) => {
     const data = fetch(`${Adress}${API_KEY}&i=${id}&plot=full`)
         .then((response) => response.json())
         .then((data) => data)

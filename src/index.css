@@ -83,6 +83,12 @@ background-color : white
   height: 100%;
   margin: 10px 450px;
 }
+.ButtonAut{
+  width: 50%;
+  height: 50%;
+  margin: 50px 350px; 
+
+}
 
   
   label:not(:last-child) {

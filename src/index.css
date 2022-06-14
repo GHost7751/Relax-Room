@@ -38,6 +38,25 @@ margin: 0 auto;
 nav {
   padding: 0 1rem;
 }
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input:checked+span {
+  text-decoration: line-through;
+}
+
+span:last-child {
+  color: red;
+  cursor: pointer;
+}
 
 .pagination{
 display: flex;
@@ -58,6 +77,11 @@ background-color : white
   width: 100%;
   height: 100%;
   padding: 200px 15px;
+}
+.inputFormTodo{
+  width: 100%;
+  height: 100%;
+  margin: 10px 450px;
 }
 
   

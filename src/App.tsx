@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import { Movie } from './Components/Movie/Movie';
 import {Series} from '../src/Components/Series/Series'
 import {Todo} from './Components/Todos/Todo';
+import { Games } from '../src/Components/Games/Games'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/movie' element={<Movie />} />
             <Route path='/series' element={<Series />} />
+            <Route path='/games' element={<Games />} />
             <Route path='/todo' element={<Todo /> } />
           </Routes>
       </BrowserRouter>

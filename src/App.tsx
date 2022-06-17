@@ -9,7 +9,7 @@ import { Games } from '../src/Components/Games/Games'
 
 
 function App() {
-  return (
+  return (  
     <div className="App">
       <BrowserRouter>
          <Header /> 
@@ -20,6 +20,7 @@ function App() {
             <Route path='/series' element={<Series />} />
             <Route path='/games' element={<Games />} />
             <Route path='/todo' element={<Todo /> } />
+           
           </Routes>
       </BrowserRouter>
     </div>

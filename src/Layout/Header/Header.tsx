@@ -16,7 +16,6 @@ const Header = () => {
                          <Link to='/series'><Nav.Link href="#series">Series</Nav.Link></Link>
                          <Link to='/games'><Nav.Link href="#series">Games</Nav.Link></Link>
                          <Link to='/todo'>  <Nav.Link href="#todos">Todos</Nav.Link></Link>
-                            <Nav.Link href="#weather">Weather</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

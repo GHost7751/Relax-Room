@@ -21,7 +21,7 @@ const MovieCard:FC<MovieProps> = (props) => {
         setData( await fetchMoviePlotFull(imdbID))
     }
 
-    
+    console.log(data)
     return (
         <>
             <Card style={{ width: '20rem', height: '100%' }} key={imdbID}>

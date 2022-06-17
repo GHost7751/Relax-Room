@@ -3,10 +3,25 @@ import { Button,Card } from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
 
 
+interface Object {
+    Title : string,
+        Year : string,
+        Released : string,
+        Runtime : string,
+        Genre : string,
+        Director : string,
+        Actors : string,
+        Plot : string,
+        Country : string,
+        Poster : string,
+        imdbID : string,
+        Writer : string
+}
+
 interface ModalProps{
     onHide : () => void,
     show : boolean,
-    data : any,
+    data : Object,
 }
 
 const MoreInfo:FC<ModalProps> = (props) => {

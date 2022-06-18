@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
-const Header = () => {
+const Header:FC = () => {
     return (
         <div>
             <Navbar bg="light" expand="lg">

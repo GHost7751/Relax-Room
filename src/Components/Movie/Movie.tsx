@@ -2,11 +2,12 @@ import { Pagination } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
 import Spinner from '../../Layout/Spinner/Spinner';
 import { fetchMovie } from '../../Service/FetchMovie';
+import APIProps from '../../Types/TypesAPI';
 import { Search } from '../Search/Search';
 import { MovieCard } from './MovieCard';
 
 const Movie:FC = () => {
-    const [value,setValue] = useState<Array<any>>([])
+    const [value,setValue] = useState<APIProps[]>([])
     const [loading,setLoading] = useState<boolean>(false);
     const [page, setPage] = useState<number>(1);
     const [search,setSearch] = useState<string>('matrix')

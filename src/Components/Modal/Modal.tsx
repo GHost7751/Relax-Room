@@ -1,27 +1,15 @@
 import React, { FC } from 'react';
 import { Button,Card } from 'react-bootstrap';
 import {Modal} from 'react-bootstrap';
+import APIPlotFull from '../../Types/TypesAPI'
 
 
-interface Object {
-    Title : string,
-        Year : string,
-        Released : string,
-        Runtime : string,
-        Genre : string,
-        Director : string,
-        Actors : string,
-        Plot : string,
-        Country : string,
-        Poster : string,
-        imdbID : string,
-        Writer : string
-}
+
 
 interface ModalProps{
     onHide : () => void,
     show : boolean,
-    data : Object,
+    data : APIPlotFull,
 }
 
 const MoreInfo:FC<ModalProps> = (props) => {

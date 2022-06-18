@@ -2,11 +2,12 @@ import { Pagination } from '@mui/material';
 import React, { FC, useEffect, useState } from 'react';
 import Spinner from '../../Layout/Spinner/Spinner';
 import { fetchSeries } from '../../Service/FetchSeries';
+import APIProps from '../../Types/TypesAPI';
 import { Search } from '../Search/Search';
 import { SeriesCard } from './SeriesCard';
 
 const Series:FC = () => {
-    const [value,setValue] = useState<Array<any>>([])
+    const [value,setValue] = useState<APIProps[]>([])
     const [loading,setLoading] = useState<boolean>(false);
     const [page, setPage] = useState<number>(1);
     const [search,setSearch] = useState<string>('matrix')

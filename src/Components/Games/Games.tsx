@@ -4,9 +4,11 @@ import Spinner from '../../Layout/Spinner/Spinner';
 import { fetchGames } from '../../Service/FetchGames';
 import { Search } from '../Search/Search';
 import { GamesCard } from './GamesCard';
+import APIProps from '../../Types/TypesAPI';
+
 
 const Games:FC = () => {
-    const [value,setValue] = useState<Array<any>>([])
+    const [value,setValue] = useState<APIProps[]>([])
     const [loading,setLoading] = useState<boolean>(false);
     const [page, setPage] = useState<number>(1);
     const [search,setSearch] = useState<string>('matrix')

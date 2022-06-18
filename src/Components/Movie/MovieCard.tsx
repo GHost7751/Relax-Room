@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import MovieProps from '../../Types/TypesMovie';
 import MoreInfo from '../Modal/Modal';
 import {fetchMoviePlotFull} from '../../Service/FetchMovie'
+import APIProps from '../../Types/TypesAPI';
 
-const MovieCard:FC<MovieProps> = (props) => {
+const MovieCard:FC<APIProps> = (props) => {
     const [modalShow, setModalShow] = useState<boolean>(false);
     const [data,setData] = useState<any>({})
     const [loading,setLoading] = useState<boolean>(false)

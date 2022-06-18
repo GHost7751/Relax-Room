@@ -1,4 +1,4 @@
-export default interface MovieProps {
+export default interface APIProps {
     Title:string,
     Year:string,
     imdbID:string,
@@ -6,7 +6,7 @@ export default interface MovieProps {
     Poster:string
 }
 
-export default interface MoviePlotFull {
+export default interface APIPlotFull {
     Title:string,
     Year:string,
     Released:string,
@@ -17,4 +17,6 @@ export default interface MoviePlotFull {
     Plot:string,
     Country:string,
     Poster:string,
+    Writer:string
 }
+
